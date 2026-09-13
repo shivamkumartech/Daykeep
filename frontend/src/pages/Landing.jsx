@@ -142,7 +142,6 @@ function Landing() {
                   01
                 </span>
 
-                <ArrowUpRight className="h-4 w-4 text-(--app-text-muted) opacity-0 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" />
               </div>
 
               <h3 className="mt-14 text-lg font-medium tracking-tight">
@@ -162,7 +161,6 @@ function Landing() {
                   02
                 </span>
 
-                <ArrowUpRight className="h-4 w-4 text-(--app-text-muted) opacity-0 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" />
               </div>
 
               <h3 className="mt-14 text-lg font-medium tracking-tight">Keep</h3>
@@ -180,7 +178,6 @@ function Landing() {
                   03
                 </span>
 
-                <ArrowUpRight className="h-4 w-4 text-(--app-text-muted) opacity-0 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" />
               </div>
 
               <h3 className="mt-14 text-lg font-medium tracking-tight">
