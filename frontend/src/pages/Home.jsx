@@ -50,20 +50,10 @@ function Home() {
         </Link>
       </div>
 
-      {/* Notes Section */}
-      <div>
-        <p className="mb-2 text-xs font-medium uppercase tracking-[0.18em] text-(--app-text-muted)">
-          Your Notes
-        </p>
-      </div>
-
       {loading ? (
         <LoadingSpinner />
       ) : notes.length === 0 ? (
         <div className="flex min-h-[50vh] flex-col items-center justify-center rounded-2xl border border-dashed border-(--app-border) px-6 py-20 text-center">
-          <div className="flex h-14 w-14 items-center justify-center rounded-full border border-(--app-border)">
-          </div>
-
           <h2 className="mt-5 text-xl font-semibold text-(--app-text)">
             No notes yet
           </h2>
