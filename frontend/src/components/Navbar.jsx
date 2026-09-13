@@ -137,7 +137,8 @@ function Navbar() {
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link to={homePath} onClick={closeMenu} className="flex items-center">
-          <span className="text-lg font-extrabold tracking-tight text-(--app-text)">
+          
+          <span className="text-2xl font-extrabold tracking-tight text-(--app-text)">
             Daykeep
           </span>
         </Link>
