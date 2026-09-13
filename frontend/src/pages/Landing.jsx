@@ -29,7 +29,7 @@ function Landing() {
           <div className="grid flex-1 items-center gap-14 py-20 lg:grid-cols-[minmax(0,1fr)_260px] lg:gap-24 lg:py-24">
             {/* Main Content */}
             <div>
-              <h1 className="max-w-5xl text-[clamp(2.5rem,7.5vw,5.5rem)] font-semibold leading-[1.1] tracking-[-0.05em]">
+              <h1 className="max-w-5xl text-[clamp(2.5rem,7.5vw,5.5rem)] font-semibold leading-[1.1] tracking-tighter">
                 Keep the things
                 <br />
                 <span className="text-(--app-text-secondary)">
