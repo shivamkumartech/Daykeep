@@ -47,12 +47,11 @@ function Landing() {
                 <div className="mt-9 flex items-center gap-5">
                   <Link
                     to="/register"
-                    className="group inline-flex items-center gap-2 rounded-full bg-(--app-accent) px-5 py-2.5 text-sm font-medium text-(--app-bg) transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--app-accent-hover)"
+                    className="group inline-flex items-center gap-2 rounded-full bg-(--app-accent) px-5 py-2.5 text-sm font-medium text-(--app-bg) transition-all duration-200 hover:bg-(--app-accent-hover)"
                   >
                     Start writing
                     <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </Link>
-
                   <Link
                     to="/login"
                     className="text-sm text-(--app-text-secondary) transition-colors duration-200 hover:text-(--app-text)"
@@ -84,7 +83,7 @@ function Landing() {
           >
             <span>Scroll</span>
 
-            <span className="flex h-7 w-7 items-center justify-center rounded-full border border-(--app-border) transition-all duration-200 group-hover:translate-y-1 group-hover:border-(--app-border-hover)">
+            <span className="flex h-7 w-7 items-center justify-center transition-all duration-200 group-hover:translate-y-1 group-hover:border-(--app-border-hover)">
               <ArrowDown className="h-3.5 w-3.5" />
             </span>
           </a>
@@ -209,7 +208,7 @@ function Landing() {
 
             <Link
               to="/register"
-              className="group inline-flex w-fit shrink-0 items-center gap-2 rounded-full bg-(--app-accent) px-6 py-3 text-sm font-medium text-(--app-bg) transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--app-accent-hover)"
+              className="group inline-flex w-fit shrink-0 items-center gap-2 rounded-full bg-(--app-accent) px-6 py-3 text-sm font-medium text-(--app-bg) transition-all duration-200 hover:bg-(--app-accent-hover)"
             >
               Create account
               <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />

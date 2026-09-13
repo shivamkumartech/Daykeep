@@ -22,7 +22,7 @@ function Home() {
           <button
             type="button"
             onClick={getNotes}
-            className="mt-4 cursor-pointer rounded-lg bg-(--app-danger) px-4 py-2 text-sm font-medium text-white transition hover:bg-(--app-danger-hover)"
+            className="mt-4 cursor-pointer rounded-full bg-(--app-danger) px-4 py-2 text-sm font-medium text-white transition hover:bg-(--app-danger-hover)"
           >
             Try again
           </button>
@@ -32,8 +32,7 @@ function Home() {
   }
 
   return (
-    <div className="w-full py-6 sm:py-10">
-      {/* Dashboard Welcome Header */}
+    <div className="w-full sm:py-6">
       <div className="mb-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-2xl font-bold tracking-tight text-(--app-text) sm:text-3xl">
@@ -43,7 +42,7 @@ function Home() {
 
         <Link
           to="/create-note"
-          className="hidden items-center gap-2 rounded-lg bg-(--app-accent) px-4 py-2.5 text-sm font-medium text-(--app-bg) shadow-sm transition hover:bg-(--app-accent-hover) sm:inline-flex"
+          className="hidden items-center gap-2 rounded-full bg-(--app-accent) px-4 py-2.5 text-sm font-medium text-(--app-bg) shadow-sm transition hover:bg-(--app-accent-hover) sm:inline-flex"
         >
           <Plus size={18} />
           <span>New Note</span>
@@ -53,9 +52,9 @@ function Home() {
       {loading ? (
         <LoadingSpinner />
       ) : notes.length === 0 ? (
-        <div className="flex min-h-[50vh] flex-col items-center justify-center rounded-2xl border border-dashed border-(--app-border) px-6 py-20 text-center">
+        <div className="flex min-h-[50vh] flex-col items-center justify-center rounded-2xl px-6 py-20 text-center">
           <h2 className="mt-5 text-xl font-semibold text-(--app-text)">
-            No notes yet
+            Nothing here yet
           </h2>
 
           <p className="mt-2 max-w-sm text-sm text-(--app-text-secondary)">

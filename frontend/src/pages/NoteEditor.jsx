@@ -140,7 +140,7 @@ function NoteEditor() {
           content: trimmedContent,
         });
 
-        toast.success("Note captured.");
+        toast.success("Note created.");
       }
 
       navigate("/notes");
