@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { Link, Navigate } from "react-router-dom";
-import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { AuthContext } from "../context/AuthContext";
+import FAQ from "../components/FAQ";
 
 function Landing() {
   const { user, loading } = useContext(AuthContext);
@@ -50,7 +51,6 @@ function Landing() {
                     className="group inline-flex items-center gap-2 rounded-full bg-(--app-accent) px-5 py-2.5 text-sm font-medium text-(--app-bg) transition-all duration-200 hover:bg-(--app-accent-hover)"
                   >
                     Start writing
-                    <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </Link>
                   <Link
                     to="/login"
@@ -140,7 +140,6 @@ function Landing() {
                 <span className="text-xs font-medium text-(--app-text-muted)">
                   01
                 </span>
-
               </div>
 
               <h3 className="mt-14 text-lg font-medium tracking-tight">
@@ -159,7 +158,6 @@ function Landing() {
                 <span className="text-xs font-medium text-(--app-text-muted)">
                   02
                 </span>
-
               </div>
 
               <h3 className="mt-14 text-lg font-medium tracking-tight">Keep</h3>
@@ -176,7 +174,6 @@ function Landing() {
                 <span className="text-xs font-medium text-(--app-text-muted)">
                   03
                 </span>
-
               </div>
 
               <h3 className="mt-14 text-lg font-medium tracking-tight">
@@ -191,6 +188,8 @@ function Landing() {
           </div>
         </div>
       </section>
+
+      <FAQ />
 
       {/* Final CTA */}
       <section className="border-t border-(--app-border) px-6 py-24 sm:px-10 lg:px-16 lg:py-32">
@@ -211,7 +210,6 @@ function Landing() {
               className="group inline-flex w-fit shrink-0 items-center gap-2 rounded-full bg-(--app-accent) px-6 py-3 text-sm font-medium text-(--app-bg) transition-all duration-200 hover:bg-(--app-accent-hover)"
             >
               Create account
-              <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </Link>
           </div>
         </div>
