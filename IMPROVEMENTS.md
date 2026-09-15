@@ -28,20 +28,13 @@ Completed items are marked with `[x]`.
 
 ### v2.0 — Todos & Reminders
 
+- [ ] Search notes
 - [ ] Todo checklists inside notes
 - [ ] Mark todos as complete
 - [ ] Note reminders
 - [ ] Reminder date and time
-- [ ] Search notes
 
-### v3.0 — Focus
-
-- [ ] Focus / Pomodoro timer
-- [ ] Start and pause focus sessions
-- [ ] Track completed focus sessions
-- [ ] Connect focus sessions with notes
-
-### v4.0 — Sharing
+### v3.0 — Sharing
 
 - [ ] Share notes with other users
 - [ ] Public note links
@@ -50,12 +43,11 @@ Completed items are marked with `[x]`.
 
 ## Technical Improvements
 
-- [ ] Pagination for large note collections
 - [ ] Optimize database queries
 - [ ] Optimize frontend rendering
 - [ ] Improve API response performance
 - [ ] Add caching where appropriate
-- [ ] Improve offline support
+- [ ] offline support
 - [ ] Installable PWA
 
 ## Account & UX
