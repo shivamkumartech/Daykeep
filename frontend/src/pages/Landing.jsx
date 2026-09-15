@@ -48,7 +48,7 @@ function Landing() {
                 <div className="mt-9 flex items-center gap-5">
                   <Link
                     to="/register"
-                    className="group inline-flex items-center gap-2 rounded-full bg-(--app-accent) px-5 py-2.5 text-sm font-medium text-(--app-bg) transition-all duration-200 hover:bg-(--app-accent-hover)"
+                    className="inline-flex items-center rounded-full bg-(--app-accent) px-5 py-2.5 text-sm font-medium text-(--app-bg) transition-all duration-200 hover:bg-(--app-accent-hover)"
                   >
                     Start writing
                   </Link>
@@ -207,13 +207,14 @@ function Landing() {
 
             <Link
               to="/register"
-              className="group inline-flex w-fit shrink-0 items-center gap-2 rounded-full bg-(--app-accent) px-6 py-3 text-sm font-medium text-(--app-bg) transition-all duration-200 hover:bg-(--app-accent-hover)"
+              className="inline-flex w-fit shrink-0 self-center rounded-full bg-(--app-accent) px-6 py-3 text-sm font-medium text-(--app-bg) transition-colors duration-200 hover:bg-(--app-accent-hover) sm:self-auto"
             >
               Create account
             </Link>
           </div>
         </div>
       </section>
+      
     </div>
   );
 }
