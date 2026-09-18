@@ -27,8 +27,7 @@ Daykeep is a minimal, distraction-free notes app built with the MERN stack.
 
 - **v1.0** — Distraction-free note-taking
 - **v2.0** — Todo checklists & reminders
-- **v3.0** — Focus / Pomodoro
-- **v4.0** — Sharing & collaboration
+- **v3.0** — Sharing & collaboration
 
 ## Tech Stack
 
