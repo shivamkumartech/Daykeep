@@ -49,11 +49,9 @@ function FAQ() {
           {/* Label */}
           <div>
             <h2 className="text-xs font-medium uppercase tracking-[0.18em] text-(--app-text-muted)">
-              FAQs
+              Frequently Asked Questions
             </h2>
-            <p className="mt-5 max-w-xs text-sm leading-6 text-(--app-text-secondary)">
-              Things people ask before they start writing.
-            </p>
+            
           </div>
 
           {/* Accordion */}
