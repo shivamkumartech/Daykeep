@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useBlocker, useNavigate, useParams } from "react-router-dom";
 import { toast } from "sonner";
 import { ArrowLeft, Check, Trash2 } from "lucide-react";
 import { NoteContext } from "../context/NoteContext";
@@ -24,7 +24,6 @@ function NoteEditor() {
   const [isDeleting, setIsDeleting] = useState(false);
 
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
-  const [showBackDialog, setShowBackDialog] = useState(false);
 
   const initialData = useRef({
     title: "",
@@ -78,6 +77,14 @@ function NoteEditor() {
   const hasMeaningfulChanges =
     title.trim() !== initialData.current.title.trim() ||
     content.trim() !== initialData.current.content.trim();
+
+  const blocker = useBlocker(
+    ({ currentLocation, nextLocation }) =>
+      !isSaving &&
+      !isDeleting &&
+      hasMeaningfulChanges &&
+      currentLocation.pathname !== nextLocation.pathname,
+  );
 
   /*
    * Create mode:
@@ -179,21 +186,6 @@ function NoteEditor() {
 
   const handleBack = () => {
     if (isSaving || isDeleting) return;
-
-    if (hasMeaningfulChanges) {
-      setShowBackDialog(true);
-      return;
-    }
-
-    if (window.history.state?.idx > 0) {
-      navigate(-1);
-    } else {
-      navigate("/notes", { replace: true });
-    }
-  };
-
-  const handleDiscardChanges = () => {
-    setShowBackDialog(false);
 
     if (window.history.state?.idx > 0) {
       navigate(-1);
@@ -327,10 +319,10 @@ function NoteEditor() {
 
       {/* Unsaved Changes Confirmation */}
       <ConfirmDialog
-        isOpen={showBackDialog}
+        isOpen={blocker.state === "blocked"}
         message="Are you sure you want to discard your changes?"
-        onConfirm={handleDiscardChanges}
-        onCancel={() => setShowBackDialog(false)}
+        onConfirm={() => blocker.proceed?.()}
+        onCancel={() => blocker.reset?.()}
         cancelText="Keep editing"
         confirmText="Discard"
       />
