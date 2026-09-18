@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, ScrollRestoration, useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import LoadingSpinner from "./components/LoadingSpinner";
@@ -10,6 +10,7 @@ function Layout() {
 
   return (
     <div className="relative flex min-h-screen flex-col bg-(--app-bg) text-(--app-text)">
+      <ScrollRestoration />
       <Navbar />
 
       <main

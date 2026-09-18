@@ -185,12 +185,21 @@ function NoteEditor() {
       return;
     }
 
-    navigate("/notes");
+    if (window.history.state?.idx > 0) {
+      navigate(-1);
+    } else {
+      navigate("/notes", { replace: true });
+    }
   };
 
   const handleDiscardChanges = () => {
     setShowBackDialog(false);
-    navigate("/notes");
+
+    if (window.history.state?.idx > 0) {
+      navigate(-1);
+    } else {
+      navigate("/notes", { replace: true });
+    }
   };
 
   const formatEditorDate = (date) => {
