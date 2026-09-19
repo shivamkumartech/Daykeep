@@ -68,12 +68,23 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showLogoutDialog, setShowLogoutDialog] = useState(false);
   const [isLoggingOut, setIsLoggingOut] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const menuRef = useRef(null);
 
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 8);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -133,7 +144,13 @@ function Navbar() {
   const homePath = user ? "/notes" : "/";
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-(--app-border) bg-(--app-bg)/90 px-6 py-4 text-(--app-text) backdrop-blur-md">
+    <nav
+      className={`sticky top-0 z-50 border-b px-6 py-4 text-(--app-text) backdrop-blur-md transition-colors duration-200 ${
+        isScrolled
+          ? "border-(--app-border) bg-(--app-bg)/90"
+          : "border-transparent bg-transparent"
+      }`}
+    >
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link to={homePath} onClick={closeMenu} className="flex items-center">
