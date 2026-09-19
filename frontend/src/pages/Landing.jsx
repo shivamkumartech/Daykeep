@@ -5,9 +5,13 @@ import { AuthContext } from "../context/AuthContext";
 import FAQ from "../components/FAQ";
 
 function Landing() {
-  const { user, loading } = useContext(AuthContext);
+  const { user, authStatus } = useContext(AuthContext);
 
-  if (!loading && user) {
+  if (authStatus === "checking") {
+    return null;
+  }
+
+  if (authStatus === "authenticated" && user) {
     return <Navigate to="/notes" replace />;
   }
 
