@@ -19,15 +19,6 @@ function Landing() {
     <div className="overflow-hidden bg-(--app-bg) text-(--app-text)">
       {/* Hero */}
       <section className="relative min-h-[calc(100vh-64px)] px-6 sm:px-10 lg:px-16">
-        {/* Subtle background detail */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-0 h-130 w-130 -translate-x-1/2 rounded-full opacity-30 blur-3xl"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(23,23,23,0.07) 0%, transparent 70%)",
-          }}
-        />
 
         <div className="relative mx-auto flex min-h-[calc(100vh-64px)] max-w-6xl flex-col">
           {/* Main Hero */}
