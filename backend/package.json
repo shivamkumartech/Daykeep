@@ -2,8 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "Backend API for the Daykeep full-stack application",
-  "license": "ISC",
-  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "author": "Shivam Kumar",
   "type": "module",
   "main": "server.js",
   "scripts": {
