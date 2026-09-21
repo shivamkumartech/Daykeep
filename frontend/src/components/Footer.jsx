@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-// X (Twitter) Icon
+// X Icon
 function XIcon({ className = "w-4 h-4" }) {
   return (
     <svg
@@ -48,47 +48,44 @@ function Footer({
   socials = DEFAULT_SOCIALS,
 }) {
   return (
-    <footer className="mt-auto w-full border-t border-(--app-border) bg-(--app-bg) px-6 py-10 sm:px-10 lg:px-16">
-      <div className="mx-auto max-w-6xl">
-        {/* Navigation Links: Privacy & Terms */}
-        <nav className="flex flex-row items-center justify-center gap-6 sm:gap-8">
-          {links.map((link) => (
-            <Link
-              key={link.name}
-              to={link.href}
-              className="text-sm font-medium text-(--app-text-secondary) transition-colors duration-200 hover:text-(--app-text)"
-            >
-              {link.name}
-            </Link>
-          ))}
-        </nav>
-
-        {/* Dotted horizontal separator */}
-        <div className="my-8 w-full border-t border-dotted border-(--app-border) sm:my-10" />
-
-        {/* Bottom Section: Copyright & Social Media Icons (identical row layout on mobile and desktop) */}
-        <div className="flex flex-row items-center justify-between text-xs text-(--app-text-muted) sm:text-sm">
-          <p className="tracking-normal text-(--app-text-muted)">
+    <footer className="mt-auto w-full border-t border-(--app-border) bg-(--app-bg) px-6 py-6 sm:px-10 sm:py-7 lg:px-16">
+      <div className="mx-auto flex max-w-6xl flex-row items-center justify-between gap-4 text-xs text-(--app-text-muted) sm:text-sm">
+        {/* Left Side: Copyright & Legal Links */}
+        <div className="flex flex-row items-center gap-5 sm:gap-6">
+          <p className="shrink-0 tracking-normal text-(--app-text-muted)">
             {copyright}
           </p>
 
-          <div className="flex flex-row items-center gap-5 sm:gap-6">
-            {socials.map((item) => {
-              const Icon = item.icon;
-              return (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={item.name}
-                  className="text-(--app-text-muted) transition-colors duration-200 hover:text-(--app-text)"
-                >
-                  <Icon className="h-4 w-4 sm:h-4.5 sm:w-4.5" />
-                </a>
-              );
-            })}
-          </div>
+          <nav className="flex flex-row items-center gap-5 sm:gap-6">
+            {links.map((link) => (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="text-xs text-(--app-text-muted) transition-colors duration-200 hover:text-(--app-text) sm:text-sm"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
+        </div>
+
+        {/* Right Side: Social Media Icons */}
+        <div className="flex shrink-0 flex-row items-center gap-5 sm:gap-6">
+          {socials.map((item) => {
+            const Icon = item.icon;
+            return (
+              <a
+                key={item.name}
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={item.name}
+                className="text-(--app-text-muted) transition-colors duration-200 hover:text-(--app-text)"
+              >
+                <Icon className="h-4 w-4 sm:h-4.5 sm:w-4.5" />
+              </a>
+            );
+          })}
         </div>
       </div>
     </footer>
