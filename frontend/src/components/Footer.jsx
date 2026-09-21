@@ -38,8 +38,8 @@ const DEFAULT_LINKS = [
 ];
 
 const DEFAULT_SOCIALS = [
-  { name: "X", href: "https://x.com", icon: XIcon },
-  { name: "GitHub", href: "https://github.com", icon: GithubIcon },
+  { name: "X", href: "https://x.com/shivamkumar_dev", icon: XIcon },
+  { name: "GitHub", href: "https://github.com/shivamkumartech", icon: GithubIcon },
 ];
 
 function Footer({

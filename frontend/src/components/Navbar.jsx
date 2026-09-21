@@ -146,13 +146,13 @@ function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 border-b px-6 py-4 text-(--app-text) backdrop-blur-md transition-colors duration-200 ${
+      className={`sticky top-0 z-50 border-b px-6 py-4 sm:px-10 lg:px-16 text-(--app-text) backdrop-blur-md transition-colors duration-200 ${
         isScrolled
           ? "border-(--app-border) bg-(--app-bg)/90"
           : "border-transparent bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="mx-auto max-w-6xl flex items-center justify-between">
         {/* Logo */}
         <Link to={homePath} onClick={closeMenu} className="flex items-center">
           <span className="text-2xl font-extrabold tracking-tight text-(--app-text)">
