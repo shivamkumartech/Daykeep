@@ -44,7 +44,7 @@ function Landing() {
                     to="/register"
                     className="inline-flex items-center rounded-full bg-(--app-accent) px-5 py-2.5 text-sm font-medium text-(--app-bg) transition-all duration-200 hover:bg-(--app-accent-hover)"
                   >
-                    Start writing
+                    Get started
                   </Link>
                   <Link
                     to="/login"
@@ -206,7 +206,7 @@ function Landing() {
             to="/register"
             className="mt-12 inline-flex items-center justify-center rounded-full bg-(--app-accent) px-7 py-3 text-sm font-medium text-(--app-bg) transition-colors duration-300 ease-out hover:bg-(--app-accent-hover) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--app-accent) focus-visible:ring-offset-2 focus-visible:ring-offset-(--app-bg)"
           >
-            Start writing
+            Get started
           </Link>
         </div>
       </section>
