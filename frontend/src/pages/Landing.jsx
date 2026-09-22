@@ -19,7 +19,6 @@ function Landing() {
     <div className="overflow-hidden bg-(--app-bg) text-(--app-text)">
       {/* Hero */}
       <section className="relative min-h-[calc(100vh-64px)] px-6 sm:px-10 lg:px-16">
-
         <div className="relative mx-auto flex min-h-[calc(100vh-64px)] max-w-6xl flex-col">
           {/* Main Hero */}
           <div className="grid flex-1 items-center gap-14 py-20 lg:grid-cols-[minmax(0,1fr)_260px] lg:gap-24 lg:py-24">
@@ -187,29 +186,30 @@ function Landing() {
       <FAQ />
 
       {/* Final CTA */}
-      <section className="border-t border-(--app-border) px-6 py-24 sm:px-10 lg:px-16 lg:py-32">
-        <div className="mx-auto max-w-6xl">
-          <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <h2 className="max-w-2xl text-3xl font-medium leading-tight tracking-[-0.035em] sm:text-4xl">
-                Keep what matters.
-              </h2>
+      <section
+        aria-labelledby="cta-heading"
+        className="px-6 py-32 sm:px-10 sm:py-40 lg:py-48"
+      >
+        <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
+          <h2
+            id="cta-heading"
+            className="text-balance text-3xl font-medium leading-[1.1] tracking-[-0.04em] sm:text-5xl lg:text-6xl"
+          >
+            Keep what matters.
+          </h2>
 
-              <p className="mt-3 text-sm leading-6 text-(--app-text-secondary)">
-                Write it now. Come back to it later.
-              </p>
-            </div>
+          <p className="mt-5 text-balance text-base text-(--app-text-secondary) sm:text-lg">
+            Write it now. Come back to it later.
+          </p>
 
-            <Link
-              to="/register"
-              className="inline-flex w-fit shrink-0 self-center rounded-full bg-(--app-accent) px-6 py-3 text-sm font-medium text-(--app-bg) transition-colors duration-200 hover:bg-(--app-accent-hover) sm:self-auto"
-            >
-              Create account
-            </Link>
-          </div>
+          <Link
+            to="/register"
+            className="mt-12 inline-flex items-center justify-center rounded-full bg-(--app-accent) px-7 py-3 text-sm font-medium text-(--app-bg) transition-colors duration-300 ease-out hover:bg-(--app-accent-hover) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--app-accent) focus-visible:ring-offset-2 focus-visible:ring-offset-(--app-bg)"
+          >
+            Start writing
+          </Link>
         </div>
       </section>
-      
     </div>
   );
 }
