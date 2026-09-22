@@ -98,19 +98,15 @@ function Landing() {
             </div>
 
             <div>
-              <p className="max-w-4xl text-xl font-medium leading-[1.08] tracking-[-0.035em] sm:text-4xl lg:text-[3.25rem]">
-                Your thoughts don’t always arrive organized.
-                <br />
-                They shouldn’t have to.
-                <br />
+              <h3 className="max-w-4xl text-2xl font-medium leading-[1.15] tracking-[-0.035em] sm:text-4xl lg:text-[3.25rem]">
+                Your thoughts don't always arrive organized.{" "}
                 <span className="text-(--app-text-secondary)">
-                  Just give them somewhere to go.
+                  They shouldn't have to. Just give them somewhere to go.
                 </span>
-              </p>
+              </h3>
 
-              <p className="mt-7 max-w-xl text-sm leading-7 text-(--app-text-secondary)">
-                Daykeep gives your thoughts a simple place to land, just a clean
-                place to write, keep what matters, and return when the time is
+              <p className="mt-8 max-w-xl text-sm leading-7 text-(--app-text-secondary)">
+                A clean place to write, keep, and return to when the time is
                 right.
               </p>
             </div>
